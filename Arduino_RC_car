@@ -1,0 +1,91 @@
+# Arduino_RC_car
+
+
+//Front Motor Pins  
+int Enable1 = 6;
+int Motor1_Pin1 = 7;  
+int Motor1_Pin2 = 8;  
+
+//Back Motor Pins      
+int Motor2_Pin1 = 9; 
+int Motor2_Pin2 = 10;
+int Enable2 = 11; 
+
+
+void setup() 
+{ 
+  pinMode(Motor1_Pin1, OUTPUT);  
+  pinMode(Motor1_Pin2, OUTPUT);
+  pinMode(Enable1, OUTPUT);
+  pinMode(Motor2_Pin1, OUTPUT);  
+  pinMode(Motor2_Pin2, OUTPUT);
+  pinMode(Enable2, OUTPUT); 
+ 
+}
+
+void loop(){
+ {
+      //Moving the Car Forward
+      digitalWrite(Motor2_Pin2, LOW);
+      digitalWrite(Motor2_Pin1, HIGH);
+      digitalWrite(Motor1_Pin1, LOW);
+      digitalWrite(Motor1_Pin2, LOW);
+      break;
+
+      //Moving the Car Backward
+      digitalWrite(Motor2_Pin1, LOW);
+      digitalWrite(Motor2_Pin2, HIGH);
+      digitalWrite(Motor1_Pin1, LOW);
+      digitalWrite(Motor1_Pin2, LOW);
+      break;
+
+      //Moving the Car Left
+      digitalWrite(Motor1_Pin1, LOW);
+      digitalWrite(Motor1_Pin2, HIGH);
+      digitalWrite(Motor2_Pin1, LOW);
+      digitalWrite(Motor2_Pin2, LOW);
+      break;
+
+      //Moving the Car Right
+      digitalWrite(Motor1_Pin2, LOW);
+      digitalWrite(Motor1_Pin1, HIGH);  
+      digitalWrite(Motor2_Pin1, LOW);
+      digitalWrite(Motor2_Pin2, LOW);
+      break;
+
+      //Stop
+      digitalWrite(Motor2_Pin2, LOW);
+      digitalWrite(Motor2_Pin1, LOW);
+      digitalWrite(Motor1_Pin2, LOW);
+      digitalWrite(Motor1_Pin1, LOW);
+      break; 
+
+      //Moving the Car Forward right
+      digitalWrite(Motor2_Pin2, LOW);
+      digitalWrite(Motor2_Pin1, HIGH);
+      digitalWrite(Motor1_Pin2, LOW);
+      digitalWrite(Motor1_Pin1, HIGH);
+      break; 
+
+      //Moving the Car backward right
+      digitalWrite(Motor1_Pin2, LOW);
+      digitalWrite(Motor1_Pin1, HIGH);
+      digitalWrite(Motor2_Pin1, LOW);
+      digitalWrite(Motor2_Pin2, HIGH);
+      break;        
+
+      //Moving the Car Forward left
+      digitalWrite(Motor2_Pin2, LOW);
+      digitalWrite(Motor2_Pin1, HIGH);
+      digitalWrite(Motor1_Pin1, LOW);
+      digitalWrite(Motor1_Pin2, HIGH);
+      break; 
+
+      //Moving the Car backward left
+      digitalWrite(Motor2_Pin1, LOW);
+      digitalWrite(Motor2_Pin2, HIGH);
+      digitalWrite(Motor1_Pin1, LOW);
+      digitalWrite(Motor1_Pin2, HIGH);
+      break;
+
+ }
